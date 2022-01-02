@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    <div id="simple">
+        <h2 v-text="message"></h2>
+        <input id="a" type="text" v-bind:value="message">
+        <input id="a" type="text" v-model="name">
+        <h2>입력된 이름: {{name}}</h2>
+        <img v-bind:src="imagePath">
+    </div>
+
+    <div id="simple1">
+        <div>좋아하는 과일을 골라주세요</div>
+        <input type="checkbox" value="1" v-model="fruits">사과,
+        <input type="checkbox" value="2" v-model="fruits">키위,
+        <input type="checkbox" value="3" v-model="fruits">포도,
+        <input type="checkbox" value="4" v-model="fruits">수박,
+        <input type="checkbox" value="5" v-model="fruits">참외,
+    </div>
+    <hr/>
+    <div id="simple2">
+        <span>선택한 과일들:{{fruits}}</span>
+    </div>
+    <script>
+        var model = {
+            message: '첫번째 Vue.js 앱입니다.',
+            imagePath:"http://sample.bmaster.kro.kr/photos/61.jpg",
+            name:'',
+            fruits:[]
+        }
+        var simple = new Vue({
+            el: '#simple',
+            data: model
+        })
+        var simple1 = new Vue({
+            el: '#simple1',
+            data: model
+        })
+        var simple2 = new Vue({
+            el: '#simple2',
+            data: model
+        })
+    </script>
+</body>
+</html>
