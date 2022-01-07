@@ -8,7 +8,6 @@
         content: ""; display: table; clear: both;
     }
 </style>
-
 <template>
     <div id="todolistapp">
         <div id="header" class="header">
@@ -18,7 +17,6 @@
         <list></list>
     </div>  
 </template>
-
 <script type="text/javascript">
 import InputTodo from './InputTodo';
 import List from './List';
